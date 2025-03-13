@@ -15,7 +15,7 @@ def load_config(path_: str = config_file_path) -> Dict:
         config = yaml.load(f, Loader=yaml.SafeLoader)
     return config
 
-def return_config_params(primary_key: str, needed_elements: List[str], multiple: bool = False) -> Any:
+def return_config_params(primary_key: str) -> Any:
     """
     Function that reads config file, a string, a list, and a boolean and parse yaml file and returns data as required.
     If we require only 1 element from the yaml then only string is returned
@@ -27,7 +27,4 @@ def return_config_params(primary_key: str, needed_elements: List[str], multiple:
     :return: A single element or a list of elements from the config.
     """
     config = load_config(config_file_path)
-    if multiple:
-        return [config[primary_key][element] for element in needed_elements]
-    else:
-        return config[primary_key]
+    return config[primary_key]
