@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.axes import Axes
 import seaborn as sns
+from scipy.stats import chi2_contingency
 
 def stacked_bar_chart(data_: pd.DataFrame, groupby_cols : list) -> Axes:
     # Group by age group and risk, then normalize
@@ -63,3 +64,25 @@ def custom_scatter_plot(data_: pd.DataFrame, x_col: str, y_col: str, hue_col: st
     if hue_col != None:
         plt.legend(title=hue_col)
     plt.show()
+
+def custom_chi_square_test(data_: pd.DataFrame, x_col: str, y_col: str) -> None:
+    # Create a contingency table
+    contingency_table = pd.crosstab(data_[x_col], data_[y_col])
+    
+    # Perform the chi-square test
+    chi2, p, dof, expected = chi2_contingency(contingency_table)
+    
+    print('contingency_table:')
+    print(contingency_table)
+    # Print the results
+    print(f'Chi-Square Statistic: {chi2}')
+    print(f'p-value: {p}')
+    print(f'Degrees of Freedom: {dof}')
+    print('Expected Frequencies: ')
+    print(expected)
+
+    # Step 4: Interpretation
+    if p < 0.05:
+        print("Reject Null Hypothesis → Both Groups are dependent.")
+    else:
+        print("Fail to Reject Null Hypothesis → Both Groups are independent.")
