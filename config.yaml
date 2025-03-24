@@ -1,3 +1,25 @@
 data:
   path: C:/Aravind's File/Projects/credit_risk/data
   credit_data: german_credit_data.csv
+  preprocessed_data: preprocessed_data.parquet
+  feature_engineered_data: feature_engineered_data.parquet
+  model_input_data: model_input_data.parquet
+
+preprocessing:
+  missing_values:
+    Saving accounts: 'Unknown'
+    Checking account: 'Unknown'
+
+  scaling:
+    - Age
+    - Credit amount
+    - Duration
+
+feature_engineering:
+  one_hot_encoding:
+    - Job
+    - Housing
+    - Saving accounts
+    - Checking account
+    - Purpose
+    - Sex
