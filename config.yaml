@@ -9,7 +9,6 @@ preprocessing:
   missing_values:
     Saving accounts: 'Unknown'
     Checking account: 'Unknown'
-
   scaling:
     - Age
     - Credit amount
