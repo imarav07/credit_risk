@@ -12,53 +12,49 @@ This project focuses on building a machine learning pipeline to predict credit r
 
 ## Project Structure
 credit_risk/
-│
-├── data/                     # Raw and processed data files
-│
-├── notebooks/                # Jupyter notebooks for analysis
-│   └── data_exploration.ipynb
-|   └── preprocessing_test.ipynb
-|   └── main_executor.ipynb
-|   └── model_exploration.ipynb
-|
+├─── data/                     # Raw and processed data files
+├─── notebooks/                # Jupyter notebooks for analysis
+│   |─── data_exploration.ipynb
+│   ├── preprocessing_test.ipynb
+│   ├── main_executor.ipynb
+│   └── model_exploration.ipynb
 ├── utils/                    # All required utils and process specific utils files
-|   ......
-|
+│   └── (other files)
 ├── pipeline/                 # Process specific pipeline and executors
-|   ......
-│
+│   └── (other files)
 ├── config.yaml               # Configuration file for preprocessing and feature engineering
-│
 └── README.md                 # Project documentation
 
 ## Dataset
-The dataset used in this project is the German Credit Dataset, which contains the following:
+  - The dataset used in this project is the German Credit Dataset, which contains the following:
 
-## Features: Financial and demographic attributes such as age, credit amount, duration, job, housing, and savings accounts.
-## Target Variable: Risk (binary classification: "good" or "bad").
+## Features: 
+  - Financial and demographic attributes such as age, credit amount, duration, job, housing, and savings accounts.
+## Target Variable: 
+  - Risk (binary classification: "good" or "bad").
 
 ## Key Steps
 1. Data Preprocessing (main_executor.ipnyb)
-  Handled missing values by filling with "Unknown" for categorical features like Saving accounts and Checking account.
-  Scaled numerical features (Age, Credit amount, Duration) using standard scaling.
+    - Handled missing values by filling with "Unknown" for categorical features like Saving accounts and Checking account.
+    - Scaled numerical features (Age, Credit amount, Duration) using standard scaling.
 2. Feature Engineering (main_executor.ipnyb)
-  Applied one-hot encoding to categorical features (Job, Housing, Saving accounts, Checking account, Purpose, Sex).
+    - Applied one-hot encoding to categorical features (Job, Housing, Saving accounts, Checking account, Purpose, Sex).
 3. Handling Imbalanced Data (model_exploration.ipynb)
-  Used SMOTE (Synthetic Minority Oversampling Technique) to balance the dataset by oversampling the minority class.
+    - Used SMOTE (Synthetic Minority Oversampling Technique) to balance the dataset by oversampling the minority class.
 4. Model Training (model_exploration.ipynb)
-  Trained multiple classification models:
-  Support Vector Machine (SVM)
-  Gradient Boosting
-  XGBoost
-  Performed hyperparameter tuning using GridSearchCV.
+    - Trained multiple classification models:
+    - Support Vector Machine (SVM)
+    - Gradient Boosting
+    - XGBoost
+    - Performed hyperparameter tuning using GridSearchCV.
 5. Model Evaluation (model_exploration.ipynb)
-  Evaluated models using metrics such as:
-  Accuracy
-  Precision
-  Recall
-  F1 Score
-  ROC AUC
-  PR AUC
+    - Evaluated models using metrics such as:
+    - Accuracy
+    - Precision
+    - Recall
+    - F1 Score
+    - ROC AUC
+    - PR AUC
 
 ## Results: 
-Models created with balanced and imbalanced dataset (model_exploration.ipynb)
+  - Models created with balanced and imbalanced dataset (model_exploration.ipynb)
