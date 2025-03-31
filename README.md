@@ -1,16 +1,16 @@
-Credit Risk Analysis
+# Credit Risk Analysis
 
-Overview
+## Overview
 This project focuses on building a machine learning pipeline to predict credit risk using a dataset of financial and demographic information. The goal is to classify customers into "good" or "bad" credit risk categories, enabling financial institutions to make informed lending decisions.
 
-The project includes:
+## The project includes:
 
-Data preprocessing and feature engineering.
-Handling imbalanced datasets using techniques like SMOTE.
-Training and evaluating multiple machine learning models (e.g., SVM, Gradient Boosting, XGBoost).
-Model explainability using SHAP (SHapley Additive exPlanations).
+- Data preprocessing and feature engineering.
+- Handling imbalanced datasets using techniques like SMOTE.
+- Training and evaluating multiple machine learning models (e.g., SVM, Gradient Boosting, XGBoost).
+- Model explainability using SHAP (SHapley Additive exPlanations).
 
-Project Structure
+## Project Structure
 credit_risk/
 │
 ├── data/                     # Raw and processed data files
@@ -31,13 +31,13 @@ credit_risk/
 │
 └── README.md                 # Project documentation
 
-Dataset
+## Dataset
 The dataset used in this project is the German Credit Dataset, which contains the following:
 
-Features: Financial and demographic attributes such as age, credit amount, duration, job, housing, and savings accounts.
-Target Variable: Risk (binary classification: "good" or "bad").
+## Features: Financial and demographic attributes such as age, credit amount, duration, job, housing, and savings accounts.
+## Target Variable: Risk (binary classification: "good" or "bad").
 
-Key Steps
+## Key Steps
 1. Data Preprocessing (main_executor.ipnyb)
   Handled missing values by filling with "Unknown" for categorical features like Saving accounts and Checking account.
   Scaled numerical features (Age, Credit amount, Duration) using standard scaling.
@@ -60,5 +60,5 @@ Key Steps
   ROC AUC
   PR AUC
 
-Results: 
+## Results: 
 Models created with balanced and imbalanced dataset (model_exploration.ipynb)
