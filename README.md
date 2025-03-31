@@ -11,19 +11,23 @@ This project focuses on building a machine learning pipeline to predict credit r
 - Model explainability using SHAP (SHapley Additive exPlanations).
 
 ## Project Structure
+
+```
 credit_risk/
-├─── data/                     # Raw and processed data files
-├─── notebooks/                # Jupyter notebooks for analysis
-│   |─── data_exploration.ipynb
+├── data/                     # Directory for raw and processed data files
+│   ├── (All data files)
+├── notebooks/                # Jupyter notebooks for analysis and experimentation
+│   ├── data_exploration.ipynb
 │   ├── preprocessing_test.ipynb
 │   ├── main_executor.ipynb
 │   └── model_exploration.ipynb
-├── utils/                    # All required utils and process specific utils files
-│   └── (other files)
-├── pipeline/                 # Process specific pipeline and executors
-│   └── (other files)
-├── config.yaml               # Configuration file for preprocessing and feature engineering
-└── README.md                 # Project documentation
+├── pipeline/                 # Complete project pipeline scripts
+│   ├── (All Pipeline files)
+├── utils/                   # utility files across the project
+│   ├── (All utils)
+├── config.yaml               # Configuration parameters of project
+├── README.md                 # Project overview and documentation
+```
 
 ## Dataset
   - The dataset used in this project is the German Credit Dataset, which contains the following:
