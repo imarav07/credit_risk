@@ -59,6 +59,7 @@ credit_risk/
     - F1 Score
     - ROC AUC
     - PR AUC
+6. Shap Analysis (model_exploration.ipynb)
 
 ## Results: 
   - Models created with balanced and imbalanced dataset (model_exploration.ipynb)
